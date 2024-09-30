@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.todo-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.todo-container {
+  background-color: #f5f2f0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.todo-container h1 {
+  color: #d7a499;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.todo-input {
+  background-color: #e8d0cb;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.todo-button {
+  background-color: #c08c80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-text {
+  color: #877570;
+  font-size: 16px;
+}
+
+.todo-action-button {
+  background-color: #d7a499;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
