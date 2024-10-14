@@ -4,6 +4,8 @@
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #f5f2f0;
+  border-radius: 10px;
 }
 
 input {
@@ -15,12 +17,6 @@ input {
 button {
   padding: 10px;
   margin-top: 10px;
-}
-
-.todo-container {
-  background-color: #f5f2f0;
-  border-radius: 10px;
-  padding: 20px;
 }
 
 .todo-container h1 {
@@ -67,7 +63,7 @@ button {
 }
 
 .todo-action-button {
-  background-color: #d7a499;
+  background-color: #e37961;
   color: white;
   border: none;
   border-radius: 5px;
@@ -75,3 +71,22 @@ button {
   font-size: 14px;
   cursor: pointer;
 }
+
+
+#installButton {
+  background-color: pink;
+  border: 2px solid hotpink;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;  /* Se muestra dinámicamente */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#installButton:hover {
+  background-color: hotpink;
+  color: white;
+}
+

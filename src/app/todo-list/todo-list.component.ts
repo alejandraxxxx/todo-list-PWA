@@ -37,4 +37,40 @@ export class TodoListComponent {
   deleteTask(taskId: number) {
     this.tasks = this.tasks.filter(task => task.id !== taskId);
   }
+
+
+
+  deferredPrompt: any;
+  showInstallButton = false;
+
+  ngOnInit(): void {
+    // Escucha el evento beforeinstallprompt
+    window.addEventListener('beforeinstallprompt', (event) => {
+      // Evita que el prompt se muestre automáticamente
+      event.preventDefault();
+
+      // Almacena el evento para usarlo más tarde
+      this.deferredPrompt = event;
+
+      // Muestra el botón de instalación
+      this.showInstallButton = true;
+    });
+  }
+
+  installPWA() {
+    if (this.deferredPrompt) {
+      // Muestra el prompt de instalación
+      this.deferredPrompt.prompt();
+
+      // Maneja la elección del usuario
+      this.deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('El usuario aceptó instalar la PWA');
+        } else {
+          console.log('El usuario rechazó instalar la PWA');
+        }
+        this.deferredPrompt = null; // Limpia el evento después de usarlo
+      });
+    }
+  }
 }
